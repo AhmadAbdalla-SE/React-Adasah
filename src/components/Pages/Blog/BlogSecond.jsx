@@ -12,7 +12,7 @@ export default function BlogSecond() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const res = await axios.get("/posts.json");
+        const res = await axios.get(`${import.meta.env.BASE_URL}/posts.json`);
         setPosts(res.data.posts); 
       } catch (error) {
         console.error("Failed to fetch posts", error);

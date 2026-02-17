@@ -6,7 +6,7 @@ export default function CardContainerThree() {
     const [Card, setCard] = useState([])
     useEffect(()=>{
         async function getInfoThree() {
-            const {data} = await axios('/posts.json')
+            const {data} = await axios(`${import.meta.env.BASE_URL}/posts.json`)
             setCard(data.posts)
         }
         getInfoThree()
